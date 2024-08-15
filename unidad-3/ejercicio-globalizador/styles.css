@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-text: #0c0b13;
+  --color-primary: #958ce7;
+  --color-secondary: #a29cda;
+  --color-accent: #5548ca;
+  --color-muted: #6c757d;
+  --border: hsl(240, 5.9%, 90%);
+  --radius: .5em;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+/* Estilos base (mobile-first) */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: var(--color-text);
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_container > h1 {
+  transform: rotate(180deg);
+  font-size: 2.3em;
+  color: var(--color-primary);
+} 
+
+.nav_container{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.nav_list {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+}
+
+.nav_item_link{
+  text-decoration: none;
+  color: black;
+}
+
+.nav_item_link:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+.nav_input_container {
+  position: relative;
+}
+
+.nav_lupa {
+  width: 1.3em;
+  height: 1.3em;
+  position: absolute;
+  top: .4em;
+  left: .4em;
+}
+
+.input {
+  padding: .6em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.nav_input{
+  padding-left: 2.4em;
+}
+
+.main_container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.main_section {
+  flex: 1;
+  min-height: 100vh;
+  padding-right: 1em;
+  padding-bottom: 2em;
+}
+
+.main_section h2 {
+  font-size: 3em;
+  line-height: .8em;
+  margin-top: .3em;
+}
+
+.main_subtitle {
+  font-size: 1.2em;
+  color: var(--color-muted);
+  margin-bottom: 1em;
+}
+
+.articles_container{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.article{
+  display: flex;
+  border-radius: var(--radius);
+  border: var(--border) solid 1px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.article:hover {
+  background-color: rgba(219, 219, 219, 0.219);
+}
+
+.article_img {
+  width: 35%;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.article_data {
+  padding: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article_text{
+  margin-top: 1em;
+  color: var(--color-muted);
+}
+
+.article_category {
+  font-size: .8em;
+  background-color: var(--color-accent);
+  padding: .2em .5em;
+  border-radius: var(--radius);
+  font-weight: bold;
+  width: fit-content;
+  color: white;
+}
+
+.article_footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: end;
+}
+
+.article_date{
+  font-size: .8em;
+  color: var(--color-muted);
+  font-weight: bold;
+}
+
+.article_link{
+  text-decoration: none;
+  color: black;
+  background-color: var(--color-primary);
+  padding: .5em 1em;
+  font-weight: bold;
+  border-radius: var(--radius);
+}
+
+aside {
+  width: 20%;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1em;
+}
+
+.aside_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: sticky;
+  top: 1em;
+}
+
+.aside_title {
+  font-size: 1.2em;
+}
+
+.aside_list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+}
+
+.aside_list li {
+  line-height: 1.2em;
+}
+
+.aside_link{
+  text-decoration: none;
+  color: black;
+}
+
+.aside_link:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+.map {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius);
+}
+
+.footer_politics{
+  font-size: small;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+
+.footer_map_container {
+  width: 100%;
+}
+
+.footer_title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: .2em;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+/* Pantallas grandes */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
