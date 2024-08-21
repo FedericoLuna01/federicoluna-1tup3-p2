@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+
+main {
+   
+    background-color: #f2f4f7;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 50vw;
+    margin: 0 auto;
+}
+
+.main_container{
+    position: relative;
+}
+
+.main_image {
+    position: absolute;
+    top: -120%;
+    left: -5%;
+}
+
+.main_subtitle{
+    font-size: 28px;
+}
+
+.main_form {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    padding: 1em;
+    border-radius: .5em;
+    width: 396px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+    background-color: white;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    width: 100%;
+}
+
+.form_input{
+    padding: 1em;
+    width: 100%;
+    font-size: 17px;
+    border-radius: .3em;
+    border: 1px solid #dddfe2;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.form_button{
+    background-color: #0866ff;
+    width: 100%;
+    padding: .5em 0;
+    font-size: 22px;
+}
+
+.form_forgot_password{
+    font-size: small;
+    text-decoration: none;
+    color: #0866ff;
+}
+
+.form_forgot_password:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    height: 1px;
+    background-color: #dddfe2;
+    width: 100%;
+}
+
+.button {
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: .3em;
+}
+
+.new_account_button{
+    background-color: #42b72a;
+    padding: 16px;
+    font-size: 17px;
+}
+
+.new_page{
+    text-align: center;
+    font-weight: 100;
+    font-size: 14px;
+    padding: 0 2em;
+}
+
+.new_page a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.new_page a:hover {
+    text-decoration: underline;
+}
